@@ -1,10 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class Question {
-  final String questionText;
+  final String img;
   final List<Answer> answerList;
 
   Question(
-    this.questionText,
+    this.img,
     this.answerList,
   );
 }
@@ -21,72 +21,72 @@ List<Question> getQuestions() {
 
   list.add(
     Question(
-      '''1.Что хотел получить в подарок Малыш в мультфильме «Малыш и Карлсон»?''',
+      'assets/images/golli.jpg',
       [
-        Answer('Велосипед', false),
-        Answer('Собаку', true),
-        Answer('Книгу о приведениях', false),
+        Answer('Hollywood', true),
+        Answer('Grand Pass', false),
+        Answer('Hyuston', false),
       ],
     ),
   );
 
   list.add(
     Question(
-      '''2.Где работал крокодил Гена в мультфильме «Чебурашка и крокодил Гена»?	''',
+      'assets/images/chicago.jpg',
       [
-        Answer('В зоопарке', true),
-        Answer('В бюро находок', false),
-        Answer('В магазине', false),
+        Answer('Chicago', true),
+        Answer('New York', false),
+        Answer('London', false),
       ],
     ),
   );
   list.add(
     Question(
-      '''3.Как зовут подружку Лоло в мультфильме «Приключения пингвинёнка Лоло»?	''',
+      'assets/images/washington.jpg',
       [
-        Answer('Тото', false),
-        Answer('Meme', false),
-        Answer('Pepe', true),
+        Answer('Holywood', false),
+        Answer('Chicago', false),
+        Answer('Washington', true),
       ],
     ),
   );
   list.add(
     Question(
-      '''4.Что написано на табличке возле дома Пятачка из мультфильма «Винни-Пух»?''',
+      'assets/images/ny.jpg',
       [
-        Answer('Посторонним В', true),
-        Answer('Добро пожаловать', false),
-        Answer('Приходите еще', false),
+        Answer('New York', true),
+        Answer('Sietl', false),
+        Answer('Detroit', false),
       ],
     ),
   );
   list.add(
     Question(
-      '''5. Лучший друг Винни-Пуха	''',
+      'assets/images/miamibeech.jpg',
       [
-        Answer('Masha', false),
-        Answer('Pyatachok', true),
-        Answer('lisa', false),
+        Answer('Boston', false),
+        Answer('Miamibeech', true),
+        Answer('Vegas', false),
       ],
     ),
   );
   list.add(
     Question(
-      '''6.Куда пыталась позвонить Фрекен Бок, когда встретилась с «милым приведением» Карлсоном?	''',
+    'assets/images/golli.jpg',
       [
-        Answer('На телевидение', true),
-        Answer('В больницу', false),
-        Answer('В больницу', false),
+        Answer('Hollywood', true),
+        Answer('Hyuston', false),
+        Answer('San Fransicko', false),
       ],
     ),
   );
   list.add(
     Question(
-      '''7. На каком музыкальном инструменте играл пёс в мультфильме «Бременские музыканты»?	''',
+      'assets/images/ny.jpg',
       [
-        Answer('Бас-гитара', true),
-        Answer('Baraban', false),
-        Answer('Балалайка', false),
+        Answer('New York', true),
+        Answer('Barbados', false),
+        Answer('Stuttgart', false),
       ],
     ),
   );

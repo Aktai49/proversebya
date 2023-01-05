@@ -23,8 +23,7 @@ class _QuizScreenState extends State<QuizScreen> {
             const DrawerHeader(
                 child: UserAccountsDrawerHeader(
               decoration:
-                  BoxDecoration(color:
-                   Color.fromARGB(255, 13, 34, 103)),
+                  BoxDecoration(color: Color.fromARGB(255, 13, 34, 103)),
               accountName: Text(
                 'Aizada Aktai',
                 style: TextStyle(
@@ -34,36 +33,31 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               accountEmail: Text(
                 'aku@gmail.com',
-                style: TextStyle(fontSize: 18, 
-                color: Colors.white),
+                style: TextStyle(fontSize: 18, color: Colors.white),
               ),
               currentAccountPicture: Padding(
                 padding: EdgeInsets.all(12.0),
                 child: CircleAvatar(
                   radius: 85,
-                  backgroundImage: AssetImage(
-                    'assets/images/luvr.jpg'),
+                  backgroundImage: AssetImage('assets/images/luvr.jpg'),
                 ),
               ),
             )),
-            ListTile(title: const Text("Логика"), onTap: () {}),
-            ListTile(title: const Text("Память"), onTap: () {}),
-            ListTile(title: const Text("Окружающий мир"), onTap: () {}),
-            ListTile(title: const Text("Загадки"), onTap: () {}),
-            ListTile(title: const Text("Математика"), onTap: () {}),
-            ListTile(title: const Text("Кроссворд"), onTap: () {}),
-            ListTile(title: const Text("English"), onTap: () {}),
-            ListTile(title: const Text("Мои достижения "), onTap: () {}),
+            ListTile(title: const Text("North America"), onTap: () {}),
+            ListTile(title: const Text("South America"), onTap: () {}),
+            ListTile(title: const Text("Europa"), onTap: () {}),
+            ListTile(title: const Text("Asia"), onTap: () {}),
+            ListTile(title: const Text("Australia"), onTap: () {}),
+            ListTile(title: const Text("Africa"), onTap: () {}),
           ],
         ),
       ),
-
-    
-
-      backgroundColor: const Color.fromARGB(255, 3, 32, 55),
-
+      backgroundColor: const Color.fromARGB(255, 245, 247, 248),
       appBar: AppBar(
-        title: const Text('"EduGet" '),
+        title: const Text(
+          '"Victorina" ',
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
       ),
       body: Container(
@@ -72,8 +66,8 @@ class _QuizScreenState extends State<QuizScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             const Text(
-              ' ТЕСТ ПО  МУЛЬТФИЛЬМАМ ',
-              style: TextStyle(color: Colors.amber, fontSize: 20),
+              ' Города, достопримечательности   ',
+              style: TextStyle(color: Colors.black, fontSize: 20),
             ),
             _questionWidget(),
             _answerList(),
@@ -94,9 +88,9 @@ class _QuizScreenState extends State<QuizScreen> {
         ),
         Center(
           child: Text(
-            'Question ${currentQuestionIndex + 1}/ ${questionList.length.toString()}',
+            'Фото ${currentQuestionIndex + 1}/ ${questionList.length.toString()}',
             style: const TextStyle(
-              color: Colors.amber,
+              color: Colors.black,
               fontSize: 20,
               fontWeight: FontWeight.w700,
             ),
@@ -110,16 +104,13 @@ class _QuizScreenState extends State<QuizScreen> {
           width: double.infinity,
           padding: const EdgeInsets.all(32),
           decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 3, 32, 55),
+            color: Colors.transparent,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Text(
-            questionList[currentQuestionIndex].questionText,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.w400,
-            ),
+          child: Image.asset(
+            questionList[currentQuestionIndex].img,
+            height: 210,
+            width: 700,
           ),
         )
       ],
@@ -130,7 +121,9 @@ class _QuizScreenState extends State<QuizScreen> {
     return Column(
       children: questionList[currentQuestionIndex]
           .answerList
-          .map((e) => _answerButton(e),)
+          .map(
+            (e) => _answerButton(e),
+          )
           .toList(),
     );
   }
@@ -149,7 +142,7 @@ class _QuizScreenState extends State<QuizScreen> {
         ),
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
-          primary: isSelected ? Colors.amber : Colors.white,
+          primary: isSelected ? Color.fromARGB(255, 99, 32, 155) : Colors.white,
           onPrimary: isSelected ? Colors.white : Colors.black,
         ),
         onPressed: () {
@@ -179,7 +172,7 @@ class _QuizScreenState extends State<QuizScreen> {
         child: Text(isLastquestion ? 'Отправить' : 'Cледующий'),
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
-          primary: const Color.fromARGB(255, 43, 85, 158),
+          primary: Colors.deepPurple,
           onPrimary: Colors.white,
         ),
         onPressed: () {
@@ -203,7 +196,7 @@ class _QuizScreenState extends State<QuizScreen> {
       isPassed = true;
     }
 
-    String title = isPassed ? 'Cдали!' : 'He сдали';
+    String title = isPassed ? 'Bravo!' : 'Учится никогда не поздно ';
 
     return AlertDialog(
       title: Text(
@@ -223,6 +216,5 @@ class _QuizScreenState extends State<QuizScreen> {
         },
       ),
     );
-  } 
+  }
 }
-                            
